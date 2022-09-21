@@ -1,19 +1,34 @@
-import { Divider, Flex, Heading, Icon, List, ListItem, Text } from '@chakra-ui/react'
+import {
+    Flex,
+    Heading,
+    Icon,
+    List,
+    ListItem,
+    Text
+} from '@chakra-ui/react'
 import React from 'react'
-import { FaScroll, FaHouzz, FaDraftingCompass } from "react-icons/fa";
-
+import {
+    FaScroll,
+    FaHouzz,
+    FaDraftingCompass
+} from "react-icons/fa";
 
 const Services = () => {
-
     return (
-        <Flex id='services' h={'75vh'} w={'100%'} direction={'column'} align={'center'} justify={'center'}
+        <Flex
+            id='services'
+            h={{base: 'full', md: '85vh', lg: '85vh'}}
+            w={'100%'}
+            direction={'column'}
+            align={'center'}
+            justify={'center'}
+            mb={{base: '20px', md: '0', lg: '0'}}
         >
-
             <Heading
                 fontFamily={'Roboto'}
                 fontWeight={'bold'}
                 textTransform={'uppercase'}
-                mt={'2.5%'}
+                mt={{base: '50px', md: '55px', lg: '55px'}}
                 mb={'4.5%'}
                 color={"rgb(111,23,22)"}
                 p={'5px 10px 5px 10px'}
@@ -27,20 +42,32 @@ const Services = () => {
                 h={'100%'}
                 justify={'center'}
                 columnGap={'50px'}
-                align={'flex-start'}
+                rowGap={{base: '50px', md: '0', lg: '0'}}
+                align={{base: 'center', md: 'flex-start', lg: 'flex-start'}}
+                flexDirection={{base: 'column', md: 'row', lg: 'row'}}
+                mb={'30px'}
             >
-
                 <Flex
-                    w={'25%'}
+                    w={{base: '100%', md: '25%', lg: '25%'}}
                     h={'fit-content'}
                     alignItems={'center'}
                     direction={'column'}
                     textAlign={'center'}
-                    rowGap={'20px'}>
-
-                    <Icon as={FaDraftingCompass} w={'75px'} h={'75px'} color={'rgb(111,23,22)'} />
-                    <Text fontSize={'3xl'}>Projetos</Text>
-                    <List fontSize={'20px'}>
+                    rowGap={'20px'}
+                >
+                    <Icon
+                        as={FaDraftingCompass}
+                        w={'75px'}
+                        h={'75px'}
+                        color={'rgb(111,23,22)'}
+                    />
+                    <Text fontSize={'3xl'}
+                    >
+                        Projetos
+                    </Text>
+                    <List
+                        fontSize={'20px'}
+                    >
                         <ListItem>
                             Projeto arquitetônico
                         </ListItem>
@@ -59,21 +86,32 @@ const Services = () => {
                     </List>
                 </Flex>
                 <Flex
-                    w={'25%'}
+                    w={{base: '100%', md: '25%', lg: '25%'}}
                     h={'fit-content'}
                     alignItems={'center'}
                     direction={'column'}
                     textAlign={'center'}
-                    rowGap={'20px'}>
-                    <Icon as={FaHouzz} w={'75px'} h={'75px'} color={'rgb(111,23,22)'} />
-                    <Text fontSize={'3xl'}>Execução de obras</Text>
-                    
-                        <List fontSize={'20px'}>
+                    rowGap={'20px'}
+                >
+                    <Icon
+                        as={FaHouzz}
+                        w={'75px'}
+                        h={'75px'}
+                        color={'rgb(111,23,22)'}
+                    />
+                    <Text
+                        fontSize={'3xl'}
+                    >
+                        Execução de obras
+                    </Text>
+                    <List
+                        fontSize={'20px'}
+                    >
                         <ListItem>
-                        Edificação de obras públicas
+                            Edificação de obras públicas
                         </ListItem>
                         <ListItem>
-                        Edificação de obras privadas
+                            Edificação de obras privadas
                         </ListItem>
                         <ListItem>
                             Reformas com excelência e qualidade
@@ -87,20 +125,32 @@ const Services = () => {
                     </List>
                 </Flex>
                 <Flex
-                    w={'25%'}
+                    w={{base: '100%', md: '25%', lg: '25%'}}
                     h={'fit-content'}
                     alignItems={'center'}
                     direction={'column'}
                     textAlign={'center'}
-                    rowGap={'20px'}>
-                    <Icon as={FaScroll} w={'75px'} h={'75px'} color={'rgb(111,23,22)'} />
-                    <Text fontSize={'3xl'}>Planilhas orçamentárias</Text>
-                    <List fontSize={'20px'}>
+                    rowGap={'20px'}
+                >
+                    <Icon
+                        as={FaScroll}
+                        w={'75px'}
+                        h={'75px'}
+                        color={'rgb(111,23,22)'}
+                    />
+                    <Text
+                        fontSize={'3xl'}
+                    >
+                        Planilhas orçamentárias
+                    </Text>
+                    <List
+                        fontSize={'20px'}
+                    >
                         <ListItem>
-                        Orçamento detalhado de sua obra
+                            Orçamento detalhado de sua obra
                         </ListItem>
                         <ListItem>
-                        Sintetização dos preços unitários
+                            Sintetização dos preços unitários
                         </ListItem>
                         <ListItem>
                             Composição de preços
@@ -113,10 +163,7 @@ const Services = () => {
                         </ListItem>
                     </List>
                 </Flex>
-
             </Flex>
-
-
         </Flex>
     )
 }
