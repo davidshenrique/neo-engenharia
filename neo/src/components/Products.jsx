@@ -1,5 +1,18 @@
-import { Box, ChakraProvider, Flex, Heading, HStack, Image, List, ListIcon, ListItem, Stack, Text } from '@chakra-ui/react'
-import React, { useEffect, useState } from 'react'
+import {
+  Box,
+  Flex,
+  Heading,
+  Image,
+  List,
+  ListIcon,
+  ListItem,
+  Text
+} from '@chakra-ui/react'
+import React,
+{
+  useEffect,
+  useState
+} from 'react'
 import { FaCheckCircle } from 'react-icons/fa'
 import product1 from '../images/product1.jpeg'
 import product2 from '../images/product2.jpeg'
@@ -65,46 +78,38 @@ const Products = () => {
       img: product15,
     },
   ];
-
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const slidesCount = slides.length;
-
   const carouselStyle = {
     transition: "all .5s",
     ml: `-${currentSlide * 100}%`,
   };
-
   const SLIDES_INTERVAL_TIME = 3000;
-
   const ANIMATION_DIRECTION = "right";
-
   useEffect(() => {
     const prevSlide = () => {
       setCurrentSlide((s) => (s === 0 ? slidesCount - 1 : s - 1));
     };
-
     const nextSlide = () => {
       setCurrentSlide((s) => (s === slidesCount - 1 ? 0 : s + 1));
     };
-
     const automatedSlide = setInterval(() => {
       ANIMATION_DIRECTION.toLowerCase() === "left" ? prevSlide() : nextSlide();
     }, SLIDES_INTERVAL_TIME);
     return () => clearInterval(automatedSlide);
   }, [slidesCount]);
-
   return (
     <Flex
-      id='projects'
+      id='products'
       w="100%"
-      h={'80vh'}
-      p={10}
+      h={{base: 'full', md: '80vh', lg: '80vh'}}
+      p={{base: '10px', md: '10', lg: '10'}}
       alignItems="center"
       justifyContent="center"
       flexDirection={'column'}
       bg={'white'}
       mb={"50px"}
+      mt={{base: '20px', md: '0', lg: '0'}}
     >
       <Heading
         fontFamily={'Roboto'}
@@ -118,12 +123,33 @@ const Products = () => {
       >
         Nossos Produtos
       </Heading>
-      <Flex w={'100%'} gap={'50px'} align={'center'} justify={'center'}>
-        <Flex w="45%" overflow="hidden" border={'5px solid rgb(111,23,22)'} borderRadius={'10px'} boxShadow={'5px 5px 5px #00000073'}>
-          <Flex pos="relative" h="400px" w="full" {...carouselStyle}>
+      <Flex
+        w={'100%'}
+        gap={'50px'}
+        align={'center'}
+        justify={'center'}
+        flexDirection={{base: 'column', md: 'row', lg: 'row'}}
+      >
+        <Flex
+          w={{base: '100%', md: '35%', lg: '35%'}}
+          overflow="hidden"
+          border={'5px solid rgb(111,23,22)'}
+          borderRadius={'10px'}
+          boxShadow={'5px 5px 5px #00000073'}
+        >
+          <Flex
+            pos="relative"
+            h="400px"
+            w="full"
+            {...carouselStyle}
+          >
             {slides.map((slide, sid) => (
-              <Box key={`slide-${sid}`} flex="none" boxSize="full" shadow="md">
-
+              <Box
+                key={`slide-${sid}`}
+                flex="none"
+                boxSize="full"
+                shadow="md"
+              >
                 <Image
                   src={slide.img}
                   alt="carousel image"
@@ -135,40 +161,74 @@ const Products = () => {
           </Flex>
         </Flex>
         <Flex>
-        <List spacing={3} color={'rgb(111,23,22)'} fontSize={'20px'}>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='rgb(111,23,22)' />
-    Rufos Pingadeira
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='rgb(111,23,22)' />
-    Meio fios
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='rgb(111,23,22)' />
-    Pavek
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='rgb(111,23,22)' />
-    Revestimento cimentícios 3D
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='rgb(111,23,22)' />
-    Lajes pré moldadas
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='rgb(111,23,22)' />
-    Piso para calçadas (estriado)
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='rgb(111,23,22)' />
-    Piso podotáteis
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='rgb(111,23,22)' />
-    Tampas canaletas para vedação das<br /> <Text ml={'31.5px'}>linhas de transmissões da eólica</Text>
-  </ListItem>
-</List>
+          <List
+            spacing={3}
+            color={'rgb(111,23,22)'}
+            fontSize={'20px'}
+          >
+            <ListItem>
+              <ListIcon
+                as={FaCheckCircle}
+                color='rgb(111,23,22)'
+              />
+              Rufos Pingadeira
+            </ListItem>
+            <ListItem>
+              <ListIcon
+                as={FaCheckCircle}
+                color='rgb(111,23,22)'
+              />
+              Meio fios
+            </ListItem>
+            <ListItem>
+              <ListIcon
+                as={FaCheckCircle}
+                color='rgb(111,23,22)'
+              />
+              Pavek
+            </ListItem>
+            <ListItem>
+              <ListIcon
+                as={FaCheckCircle}
+                color='rgb(111,23,22)'
+              />
+              Revestimento cimentícios 3D
+            </ListItem>
+            <ListItem>
+              <ListIcon
+                as={FaCheckCircle}
+                color='rgb(111,23,22)'
+              />
+              Lajes pré moldadas
+            </ListItem>
+            <ListItem>
+              <ListIcon
+                as={FaCheckCircle}
+                color='rgb(111,23,22)'
+              />
+              Piso para calçadas (estriado)
+            </ListItem>
+            <ListItem>
+              <ListIcon
+                as={FaCheckCircle}
+                color='rgb(111,23,22)'
+              />
+              Piso podotáteis
+            </ListItem>
+            <ListItem>
+              <ListIcon
+                as={FaCheckCircle}
+                color='rgb(111,23,22)'
+              />
+              Tampas canaletas para vedação das
+              <br />
+              <Text
+                ml={'31.5px'}
+              >
+                linhas de transmissões da eólica
+              </Text>
+            </ListItem>
+          </List>
         </Flex>
       </Flex>
     </Flex>

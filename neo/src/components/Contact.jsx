@@ -1,6 +1,16 @@
-import { Box, Button, Flex, FormControl, Heading, Icon, Input, Link, Text, Textarea } from '@chakra-ui/react'
+import {
+  Flex,
+  Heading,
+  Icon,
+  Link,
+  Text
+} from '@chakra-ui/react'
 import React from 'react'
-import { AiOutlineMail, AiFillInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
+import {
+  AiOutlineMail,
+  AiFillInstagram,
+  AiOutlineWhatsApp
+} from 'react-icons/ai'
 
 const Contact = () => {
   return (
@@ -13,46 +23,97 @@ const Contact = () => {
       boxShadow={'2px 2px 15px 2px #0000007d'}
       color={'white'}
       justify={'center'}>
-
-
       <Flex
-
-        w={'50%'}
+        w={{base: '100%', md: '50%', lg: '50%'}}
         align={'center'}
         justify={"center"}
-        textAlign={"center"}
-        flexDirection={'column'}>
-        <Heading mb={'20px'}>Contato</Heading>
+        flexDirection={'column'}
+        ml={{base: '0', md: '75px', lg: '75px'}}
+      >
+        <Heading
+          mb={'20px'}
+          ml={{base: '0', md: '-75px', lg: '-75px'}}
+          fontFamily={'Roboto'}
+        fontWeight={'bold'}
+        textTransform={'uppercase'}
+        color={'aliceblue'}
+        textShadow={'2px 2px 2px #000000a0'}
+        >
+          Contato
+        </Heading>
         <Flex>
-
-          <Flex gap={'10px'} flexDirection={'column'}>
-            <Icon as={AiOutlineMail} h={'40px'} w={'40px'} mr={'10px'} />
-            <Icon as={AiFillInstagram} h={'40px'} w={'40px'} mr={'10px'} />
-            <Icon as={AiOutlineWhatsApp} h={'40px'} w={'40px'} mr={'10px'} />
-            <Icon as={AiOutlineWhatsApp} h={'40px'} w={'40px'} mr={'10px'} />
-
+          <Flex
+            gap={'10px'}
+            flexDirection={'column'}
+          >
+            <Icon
+              as={AiOutlineMail}
+              h={'40px'}
+              w={'40px'}
+              mr={'10px'}
+            />
+            <Icon
+              as={AiFillInstagram}
+              h={'40px'}
+              w={'40px'}
+              mr={'10px'}
+            />
+            <Icon
+              as={AiOutlineWhatsApp}
+              h={'40px'}
+              w={'40px'}
+              mr={'10px'}
+            />
+            <Icon
+              as={AiOutlineWhatsApp}
+              h={'40px'}
+              w={'40px'}
+              mr={'10px'}
+            />
           </Flex>
-
-          <Flex gap={'15px'} flexDirection={'column'}>
-            <Link href='mailto: neo.engconstrucoes@gmail.com'>
-              <Text fontSize={'24px'}>Contatar por e-mail</Text>
+          <Flex
+            gap={{base: '22px', md: '15px', lg: '15px'}}
+            flexDirection={'column'}
+          >
+            <Link
+              href='mailto: neo.engconstrucoes@gmail.com'
+            >
+              <Text
+                fontSize={{base: '20px', md: '24px', lg: '24px'}}
+              >
+                neo.engconstrucoes@gmail.com
+              </Text>
             </Link>
-            <Link href='https://www.instagram.com/neoengenhariagbi/'>
-              <Text fontSize={'24px'}>@neoengenhariagbi</Text>
+            <Link
+              href='https://www.instagram.com/neoengenhariagbi/'
+            >
+              <Text
+                fontSize={{base: '20px', md: '24px', lg: '24px'}}
+              >
+                @neoengenhariagbi
+              </Text>
             </Link>
-            <Link href='https://api.whatsapp.com/send?phone=5577999030077'>
-              <Text fontSize={'24px'}>+55 (77) 99903-0077</Text>
+            <Link
+              href='https://api.whatsapp.com/send?phone=5577999030077'
+            >
+              <Text
+                fontSize={{base: '20px', md: '24px', lg: '24px'}}
+              >
+                +55 (77) 99903-0077
+              </Text>
             </Link>
-            <Link href='https://api.whatsapp.com/send?phone=5577991748424'>
-              <Text fontSize={'24px'}>+55 (77) 99174-8424</Text>
+            <Link
+              href='https://api.whatsapp.com/send?phone=5577991748424'
+            >
+              <Text
+                fontSize={{base: '20px', md: '24px', lg: '24px'}}>
+                +55 (77) 99174-8424
+              </Text>
             </Link>
           </Flex>
-
         </Flex>
-
       </Flex>
     </Flex>
-
   )
 }
 
