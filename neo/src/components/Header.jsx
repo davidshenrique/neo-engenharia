@@ -14,14 +14,14 @@ const Header = (props) => {
         </AnchorLink>
 
         <AnchorLink href={props.linkProjects}>
-        <Text color={'rgb(111,23,22)'} _hover={{textDecoration: 'underline', color: '#222222', cursor: 'pointer'}}>Projetos</Text>
+        <Text color={'rgb(111,23,22)'} _hover={{textDecoration: 'underline', color: '#222222', cursor: 'pointer'}}>Produtos</Text>
         </AnchorLink>
 
         <AnchorLink href={props.linkMission}>
         <Text color={'rgb(111,23,22)'} _hover={{textDecoration: 'underline', color: '#222222', cursor: 'pointer'}}>Sobre</Text>
         </AnchorLink>
 
-        <AnchorLink href={props.link}>
+        <AnchorLink href={props.linkContact}>
         <Text color={'rgb(111,23,22)'} _hover={{textDecoration: 'underline', color: '#222222', cursor: 'pointer'}}>Contato</Text>
         </AnchorLink>
 

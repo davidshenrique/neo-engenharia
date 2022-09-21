@@ -92,7 +92,7 @@ const Projects = () => {
         Nossas obras
       </Heading>
       <Flex w={'100%'} gap={'50px'} align={'center'} justify={'center'}>
-        <Flex w="45%" overflow="hidden" border={'5px solid white'} borderRadius={'10px'} boxShadow={'5px 5px 5px #00000073'}>
+        <Flex w="65%" overflow="hidden" border={'5px solid white'} borderRadius={'10px'} boxShadow={'5px 5px 5px #00000073'}>
           <Flex pos="relative" h="400px" w="full" {...carouselStyle}>
             {slides.map((slide, sid) => (
               <Box key={`slide-${sid}`} flex="none" boxSize="full" shadow="md">
@@ -106,46 +106,6 @@ const Projects = () => {
               </Box>
             ))}
           </Flex>
-        </Flex>
-        <Flex>
-        <List spacing={3} color={'white'} fontSize={'20px'}>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='#00ff26' />
-    Construção
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='#00ff26' />
-    Reforma
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='#00ff26' />
-    Projeto
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='#00ff26' />
-    Manutenção
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='#00ff26' />
-    Estrutura Metálica
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='#00ff26' />
-    Impermeabilização
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='#00ff26' />
-    Alvenaria
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='#00ff26' />
-    Piso em concreto
-  </ListItem>
-  <ListItem>
-    <ListIcon as={FaCheckCircle} color='#00ff26' />
-    Hidráulica
-  </ListItem>
-</List>
         </Flex>
       </Flex>
     </Flex>

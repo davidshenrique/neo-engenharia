@@ -1,4 +1,4 @@
-import { Box, Button, Flex, FormControl, Heading, Icon, Input, Text, Textarea } from '@chakra-ui/react'
+import { Box, Button, Flex, FormControl, Heading, Icon, Input, Link, Text, Textarea } from '@chakra-ui/react'
 import React from 'react'
 import { AiOutlineMail, AiFillInstagram, AiOutlineWhatsApp } from 'react-icons/ai'
 
@@ -6,13 +6,15 @@ const Contact = () => {
   return (
 
     <Flex
+      id='contact'
       w={'100%'}
-      h={'70vh'}
+      h={'45vh'}
       bg={'rgb(111,23,22)'}
+      boxShadow={'2px 2px 15px 2px #0000007d'}
       color={'white'}
       justify={'center'}>
-        
-<Heading mt={'20px'} position={'absolute'} >Contato</Heading>
+
+
       <Flex
 
         w={'50%'}
@@ -20,10 +22,9 @@ const Contact = () => {
         justify={"center"}
         textAlign={"center"}
         flexDirection={'column'}>
-
-        
-
+        <Heading mb={'20px'}>Contato</Heading>
         <Flex>
+
           <Flex gap={'10px'} flexDirection={'column'}>
             <Icon as={AiOutlineMail} h={'40px'} w={'40px'} mr={'10px'} />
             <Icon as={AiFillInstagram} h={'40px'} w={'40px'} mr={'10px'} />
@@ -33,24 +34,22 @@ const Contact = () => {
           </Flex>
 
           <Flex gap={'15px'} flexDirection={'column'}>
-            <Text fontSize={'24px'}>email@email.com</Text>
-            <Text fontSize={'24px'}>@neoengenhariagbi</Text>
-            <Text fontSize={'24px'}>+55 (77) 99903-0077</Text>
-            <Text fontSize={'24px'}>+55 (77) 99174-8424</Text>
+            <Link href='mailto: neo.engconstrucoes@gmail.com'>
+              <Text fontSize={'24px'}>Contatar por e-mail</Text>
+            </Link>
+            <Link href='https://www.instagram.com/neoengenhariagbi/'>
+              <Text fontSize={'24px'}>@neoengenhariagbi</Text>
+            </Link>
+            <Link href='https://api.whatsapp.com/send?phone=5577999030077'>
+              <Text fontSize={'24px'}>+55 (77) 99903-0077</Text>
+            </Link>
+            <Link href='https://api.whatsapp.com/send?phone=5577991748424'>
+              <Text fontSize={'24px'}>+55 (77) 99174-8424</Text>
+            </Link>
           </Flex>
 
         </Flex>
 
-      </Flex>
-      <Flex w={"50%"} flexDirection={'column'} align={'center'} justify={'center'} pt={'50px'}>
-      
-      <FormControl display={'flex'} flexDirection={'column'} gap={'10px'} w={'60%'} borderRadius={'10px'} alignItems={'center'}>
-        <Input  bg={'white'} color={'black'} _placeholder={{color: 'black'}} type={'text'} placeholder='Nome'></Input>
-        <Input bg={'white'} color={'black'} _placeholder={{color: 'black'}} type={'email'} placeholder='E-mail'></Input>
-        <Input bg={'white'} color={'black'} _placeholder={{color: 'black'}} type={'number'} placeholder='Telefone'></Input>
-        <Textarea bg={'white'} color={'black'} _placeholder={{color: 'black'}} placeholder='Sua mensagem aqui:' />
-        <Button w={'30%'} colorScheme={'whatsapp'}>Enviar</Button>
-      </FormControl>
       </Flex>
     </Flex>
 
