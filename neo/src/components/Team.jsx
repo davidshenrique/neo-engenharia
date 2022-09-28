@@ -57,6 +57,48 @@ const Team = () => {
                         justify={'center'}
                     >
                         <Image
+                            src={img1}
+                            border={'1px solid black'}
+                            borderRadius={'100%'}
+                        />
+                    </Flex>
+                    <Flex
+                        w={'100%'}
+                        justify={'center'}
+                    >
+                        <List
+                            color={'white'}
+                            fontSize={'20px'}
+                        >
+                            <ListItem
+                                fontWeight={'bold'}
+                            >
+                                GABRIEL SILVEIRA NEVES
+                            </ListItem>
+                            <ListItem>
+                                ENGENHEIRO CIVIL
+                            </ListItem>
+                            <ListItem>
+                                CREA: 3000105750BA
+                            </ListItem>
+                        </List>
+                    </Flex>
+                </Flex>
+                <Flex
+                    flexDirection={'column'}
+                    w={{ base: '100%', md: '50%', lg: '50%' }}
+                    h={'100%'}
+                    align={'center'}
+                    textAlign={'center'}
+                    p={'20px'}
+                >
+                    <Flex
+                        w={'100%'}
+                        h={'50%'}
+                        mb={'20px'}
+                        justify={'center'}
+                    >
+                        <Image
                             src={img3}
                             border={'1px solid black'}
                             borderRadius={'100%'}
@@ -86,48 +128,7 @@ const Team = () => {
                                 CREA: 3000111966BA
                             </ListItem>
                         </List>
-                    </Flex>
-                </Flex>
-                <Flex
-                    flexDirection={'column'}
-                    w={{ base: '100%', md: '50%', lg: '50%' }}
-                    h={'100%'}
-                    align={'center'}
-                    textAlign={'center'}
-                    p={'20px'}
-                >
-                    <Flex
-                        w={'100%'}
-                        h={'50%'}
-                        mb={'20px'}
-                        justify={'center'}
-                    >
-                        <Image
-                            src={img1}
-                            border={'1px solid black'}
-                            borderRadius={'100%'}
-                        />
-                    </Flex>
-                    <Flex
-                        w={'100%'}
-                        justify={'center'}
-                    >
-                        <List
-                            color={'white'}
-                            fontSize={'20px'}
-                        >
-                            <ListItem
-                                fontWeight={'bold'}
-                            >
-                                GABRIEL SILVEIRA NEVES
-                            </ListItem>
-                            <ListItem>
-                                ENGENHEIRO CIVIL
-                            </ListItem>
-                            <ListItem>
-                                CREA: 3000105750BA
-                            </ListItem>
-                        </List>
+                        
                     </Flex>
                 </Flex>
             </Flex>
