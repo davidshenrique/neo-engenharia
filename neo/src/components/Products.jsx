@@ -185,7 +185,7 @@ const Products = () => {
                 as={FaCheckCircle}
                 color='rgb(111,23,22)'
               />
-              Pavek
+              Paver - Bloquete
             </ListItem>
             <ListItem>
               <ListIcon

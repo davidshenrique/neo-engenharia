@@ -73,17 +73,13 @@ const Team = () => {
                             <ListItem
                                 fontWeight={'bold'}
                             >
-                                SANDRO ALEX M. CARVALHO
+                                GABRIEL SILVEIRA NEVES
                             </ListItem>
                             <ListItem>
                                 ENGENHEIRO CIVIL
-                                <br />
-                                PÓS-GRADUAÇÃO EM CONSTRUÇÃO CIVIL
-                                <br />
-                                RESIDENCIAL, INDUSTRIAL E ESPECIAL
                             </ListItem>
                             <ListItem>
-                                CREA: 3000111966BA
+                                CREA: 3000105750BA
                             </ListItem>
                         </List>
                     </Flex>
@@ -119,15 +115,20 @@ const Team = () => {
                             <ListItem
                                 fontWeight={'bold'}
                             >
-                                GABRIEL SILVEIRA NEVES
+                                SANDRO ALEX M. CARVALHO
                             </ListItem>
                             <ListItem>
                                 ENGENHEIRO CIVIL
+                                <br />
+                                PÓS-GRADUAÇÃO EM CONSTRUÇÃO CIVIL
+                                <br />
+                                RESIDENCIAL, INDUSTRIAL E ESPECIAL
                             </ListItem>
                             <ListItem>
-                                CREA: 3000105750BA
+                                CREA: 3000111966BA
                             </ListItem>
                         </List>
+                        
                     </Flex>
                 </Flex>
             </Flex>
