@@ -57,7 +57,7 @@ const Team = () => {
                         justify={'center'}
                     >
                         <Image
-                            src={img3}
+                            src={img1}
                             border={'1px solid black'}
                             borderRadius={'100%'}
                         />
@@ -99,7 +99,7 @@ const Team = () => {
                         justify={'center'}
                     >
                         <Image
-                            src={img1}
+                            src={img3}
                             border={'1px solid black'}
                             borderRadius={'100%'}
                         />
